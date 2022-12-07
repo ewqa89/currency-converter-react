@@ -8,7 +8,7 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  background-image: url("mountains.jpg");
+  background-image: url("./mountains.jpg");
   background-position: center;
   background-size: 2500px auto;
   background-repeat: no-repeat;
