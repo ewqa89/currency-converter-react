@@ -13,14 +13,14 @@ const currencys = [
         course: 4.3947
     },
     {
-        name: "Korona czeska",
-        short: "CZK",
-        course: 0.1927
+        name: "Jen",
+        short: "JPY",
+        course: 3.3377
     },
     {
-        name: "Korona norweska",
-        short: "NOK",
-        course: 0.4456
+        name: "Frank szwajcarski",
+        short: "CHF",
+        course: 4.7443
     },
 ];
 
