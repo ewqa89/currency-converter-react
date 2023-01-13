@@ -32,11 +32,27 @@ const Form = () => {
 
     const [result, setResult] = useState(null);
 
-    const calculate = (amount, currency) => {
+    const [myDate, setMyDate] = useState(new Date());
 
-        const { course, short } = currencys.find(({ short }) => short === currency);
-        setResult((amount / course).toFixed(2) + ' ' + short);
+    const renderTime = (myDate) => {
+        const myTime = myDate.toLocaleString(
+            "pl-PL",
+            { weekday: "long", day: "numeric", month: "long" })
+            + ", " +
+            myDate.toLocaleTimeString("pl-PL");
+        return myTime;
     };
+
+    setInterval(() => {
+        setMyDate(new Date());
+    }, 1000);
+
+
+    const calculate = (amount, currency) => {
+        const { course } = currencys.find(({ short }) => short === currency);
+        return (amount / course);
+    };
+
 
     const foundCourse = (currency) => {
         const actualSetValue = currencys.find(element => element.short === currency)
@@ -45,7 +61,7 @@ const Form = () => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        calculate(amount, currency);
+        setResult(calculate(amount, currency).toFixed(2) + ' ' + currency);
     };
 
     return (
@@ -54,6 +70,9 @@ const Form = () => {
             onSubmit={onFormSubmit}
         >
             <fieldset className="form__fildset">
+                <p className="form">
+                    Dzisiaj jest {renderTime(myDate)}
+                </p>
                 <legend className="form__legend">
                     Kalkulator walut
                 </legend>
