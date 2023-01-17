@@ -5,22 +5,22 @@ const currencys = [
     {
         name: "Euro",
         short: "EUR",
-        course: 4.6648
+        course: 4.7004
     },
     {
         name: "Dolar amerykański",
         short: "USD",
-        course: 4.3947
+        course: 4.3436
     },
     {
         name: "Jen",
         short: "JPY",
-        course: 3.3377
+        course: 3.3837
     },
     {
         name: "Frank szwajcarski",
         short: "CHF",
-        course: 4.7443
+        course: 4.6959
     },
 ];
 
@@ -70,7 +70,7 @@ const Form = () => {
             onSubmit={onFormSubmit}
         >
             <fieldset className="form__fildset">
-                <p className="form">
+                <p className="form__fildse--clock">
                     Dzisiaj jest {renderTime(myDate)}
                 </p>
                 <legend className="form__legend">
@@ -125,7 +125,7 @@ const Form = () => {
                         Po przeliczeniu otrzymasz: <strong>{result}</strong>
                     </label>
                 </p>
-                <p className="form__paragraph">*Kurs z dnia 21.12.2022</p>
+                <p className="form__paragraph">*Kurs z dnia 16.01.2021</p>
             </fieldset>
         </form>
     );
