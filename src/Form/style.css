@@ -50,6 +50,12 @@
     padding: 20px;
 }
 
+.form__fildse--clock {
+    text-align: right;
+    font-family: monospace;
+    color: rgb(66, 66, 66);
+}
+
 .form__legend {
     background-color: rgb(105, 43, 77);
     color: white;
